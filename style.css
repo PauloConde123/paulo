@@ -1,0 +1,153 @@
+/* Configuração global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif sans-serif; /*Fonte basica e leve */
+    margin: 0; /*Tira a margem padrão do navegador */
+    padding: 0; /*Tira o espaçamento padrão */
+    background-color: #f8f8f8; /* fundo clarinho*/
+    color: #333; /* cor da fonte (cinza escuro, bom contraste) */
+}
+
+header {
+    position: sticky; /* fixa o header no topo */
+    top: 0; /* cola no topo */
+    z-index: 1000; /* garante que fique acima de tudo */
+    background: linear-gradient(90deg, #ff69b4, #ff85c1); /* Gradiente rosa */
+    padding: 20px; /* espaço interno */
+    text-align: center; /*Centralizar o texto */
+    color: white; /* Fonte branca */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /*sombra elegante */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* cetraliza os botoes */
+    flex-wrap: wrap; /* garante que em telas pequenas eles se ajustem */
+    gap: 10px; /* espaço entre os botoes */
+}
+
+nav a {
+    display: inline-block; /* faz o link virar um bloco clicavel */
+    margin: 0 10px; /* espaçamento entre os links */
+    padding: 10px 15px; /* cria o botão */
+    color: white; /*Links brancos */
+    text-decoration: none; /* tira o sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+    border-radius: 20px; /* bordas arredondadas */
+    background-color: rgba(255,255,255,0.2); /* fundo semi-transparente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animação de hover */
+}
+
+nav a:hover  {
+    background-color: rgba(255,255,255,0.4); /* muda a opacidade no hover */
+    transform: scale(1.05); /* da um zoom leve */
+}
+
+section {
+    padding: 40px 20px; /* Mais respiro */
+    max-width: 900px; /* largura controlada */
+    margin: 0 auto; /*Centraliza tudo na pagina */
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em; /* titulo grande */
+    color: #ff69b4; /* destaque rosa */
+}
+
+.galeria {
+    display: grid; /* cria um layout em grade (grid responsivo) */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* se adapta ao tamanho da tela */
+    gap: 10px; /* espaçamento entre as imagens */
+}
+
+.galeria img {
+    width: 100%; /* imagem ocupa 100% do espaço disponivel */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /*Sombra leve nas imagens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação suave */
+    cursor: pointer; /* muda o cursor para mãozinha */
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* dá um zoom suave */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* aumenta a sombra */
+}
+
+ul {
+    list-style: none; /* tira as bolinhas da list */
+    padding: 0;
+}
+
+li {
+    background-color: white; /* fundo branco nos serviços */
+    margin: 10px 0; /*espaço entre os itens */
+    padding: 15px; /* espaçamento interno */
+    border-radius: 10px; /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-5px); /* eleva o card */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+whatsapp-button {
+    display: inline-block; /* deixa o botão com tamanho ajustado ao texto */
+    background-color: #25d366; /* verde do whatsApp */
+    color: white; /*Fonte branca */
+    padding: 15px 25px; /*tamanho confortavel para clicar */
+    text-decoration: none; /* tira sublinhado */
+    border-radius: 5px; /* borda arredondada */
+    font-weight: bold; /* texto forte */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra para dar destaque */
+    transition: background-color 0.3s ease; /* efeito suave ao passa o mouse */
+}
+
+whatsapp-button:hover {
+    background-color: #1ebe57; /* verde mais escuro no hover */
+}
+
+footer {
+    text-align: center; /* Centraliza o texto */
+    padding: 15px; /*espaço interno */
+    background-color: #ddd; /* cinza leve */
+    color: #333; /* Fonte escura */
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
